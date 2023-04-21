@@ -1,0 +1,65 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+
+
+.optionLabel {
+  margin: $base-size 0;
+}
+
+.choices {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  button {
+    border: none;
+    color: inherit;
+    font: inherit;
+    background: $color-dark;
+    border-radius: math.div($radius, 2);
+    padding: $base-size;
+    margin: math.div($base-size, 2.5) $base-size;
+    background: rgba(47, 53, 66, 0.5);
+    min-width: $base-size * 3;
+    min-height: $base-size * 3;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1.2);
+      background: rgb(47, 53, 66);
+    }
+
+    &.colorBlack {
+      background: #000;
+    }
+
+    &.colorRed {
+      background: #e74c3c;
+    }
+
+    &.colorWhite {
+      background: #fff;
+    }
+
+    &.colorBlue {
+      background: #3498db;
+    }
+
+    &.colorGreen {
+      background: #2ecc71;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+}
+
+.sizes .choices button:hover {
+  background: rgb(47, 53, 66);
+}
