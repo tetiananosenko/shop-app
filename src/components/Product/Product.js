@@ -1,32 +1,33 @@
 import styles from './Product.module.scss';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import ProductImage from '../ProductImage/ProductImage';
 import ProductForm from '../ProductForm/ProductForm'
 
 const Product = props => {
-  const [currentColor, setCurrentColor] = useState(props.colors[0]);
-  const [currentSize, setCurrentSize] = useState(props.sizes[0].name);
+  const { name, basePrice, title, colors, sizes, } = props;
+  const [currentColor, setCurrentColor] = useState(colors[0]);
+  const [currentSize, setCurrentSize] = useState(sizes[0].name);
 
-  const getPrices = () => {
-    const prices = props.sizes.find((size) => size.name === currentSize);
-    const sum = Number(prices.additionalPrice) + props.basePrice;
+  const getPrices = useMemo(() => {
+    const prices = sizes.find((size) => size.name === currentSize);
+    const sum = Number(prices.additionalPrice) + basePrice;
     return sum;
-  }
+  }, [sizes, basePrice, currentSize]);
 
   return (
     <article className={styles.product}>
-      <ProductImage name={props.name} color={currentColor} />
+      <ProductImage name={name} color={currentColor} />
       <div>
         <header>
-          <h2 className={styles.name}>{props.title}</h2>
-          <span className={styles.price}>Price: {getPrices()}$</span>
+          <h2 className={styles.name}>{title}</h2>
+          <span className={styles.price}>Price: {getPrices}$</span>
         </header>
         <ProductForm
-          sizes={props.sizes} currentSize={currentSize}
-          setCurrentSize={setCurrentSize} colors={props.colors}
+          sizes={sizes} currentSize={currentSize}
+          setCurrentSize={setCurrentSize} colors={colors}
           currentColor={currentColor} setCurrentColor={setCurrentColor}
-         basePrice={props.basePrice} title={props.title}
+         basePrice={basePrice} title={title}
         />
       </div>
     </article>
@@ -36,6 +37,9 @@ const Product = props => {
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   basePrice: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  colors: PropTypes.array.isRequired,
+  sizes: PropTypes.array.isRequired,
 };
 
 export default Product;
