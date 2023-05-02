@@ -9,7 +9,7 @@ const OptionSize = props => {
     <div className={styles.sizes}>
       <h3 className={styles.optionLabel}>Sizes</h3>
       <ul className={styles.choices}>
-        {props.sizes.map((size, index) => <li key={index}><button type="button" className={clsx(props.currentSize === size.name && styles.active)} onClick={() => props.setSize(size.name)}>{size.name}</button></li>)}
+        {props.sizes.map((size, index) => <li key={size}><button type="button" className={clsx(props.currentSize === size.name && styles.active)} onClick={() => props.setSize(size.name)}>{size.name}</button></li>)}
       </ul>
     </div>
   )
