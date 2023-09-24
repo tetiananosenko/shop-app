@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/shop-app/static/css/main.db32383e.chunk.css",
+    "main.js": "/shop-app/static/js/main.455b4398.chunk.js",
+    "main.js.map": "/shop-app/static/js/main.455b4398.chunk.js.map",
+    "runtime-main.js": "/shop-app/static/js/runtime-main.fd797c23.js",
+    "runtime-main.js.map": "/shop-app/static/js/runtime-main.fd797c23.js.map",
+    "static/css/2.b3a4e7ce.chunk.css": "/shop-app/static/css/2.b3a4e7ce.chunk.css",
+    "static/js/2.c105917a.chunk.js": "/shop-app/static/js/2.c105917a.chunk.js",
+    "static/js/2.c105917a.chunk.js.map": "/shop-app/static/js/2.c105917a.chunk.js.map",
+    "index.html": "/shop-app/index.html",
+    "static/css/2.b3a4e7ce.chunk.css.map": "/shop-app/static/css/2.b3a4e7ce.chunk.css.map",
+    "static/css/main.db32383e.chunk.css.map": "/shop-app/static/css/main.db32383e.chunk.css.map",
+    "static/js/2.c105917a.chunk.js.LICENSE.txt": "/shop-app/static/js/2.c105917a.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/shop-app/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd797c23.js",
+    "static/css/2.b3a4e7ce.chunk.css",
+    "static/js/2.c105917a.chunk.js",
+    "static/css/main.db32383e.chunk.css",
+    "static/js/main.455b4398.chunk.js"
+  ]
+}
