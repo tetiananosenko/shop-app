@@ -1,5 +1,5 @@
-#  Shop App🛍️
-My first site is written on React! On this website you can choose t-shirt, size and color and save products in your cart.[More details]().
+#  Shop Website🛍️
+My first website is written on React! On this website you can choose t-shirt, size and color and save products in your cart.[More details](https://tetiananosenko.github.io/shop-app/).
 ## Project Description
 Functionality:
 
